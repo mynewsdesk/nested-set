@@ -1,6 +1,6 @@
 # Nested Set Model
 
-Simple nested set model (java) implementation for managing hierarchical data in an SQL database.
+Simple nested set model (java)implementation for managing hierarchical data in an SQL database.
 
 The term was apparently introduced by Joe Celko. Others describe the same technique using 
 different terms. Google 'Celko' or 'nested set model' for more info.
@@ -8,9 +8,9 @@ different terms. Google 'Celko' or 'nested set model' for more info.
 ## Build
 mvn clean install
 
-## Dependendies
+## Dependencies
 
-The only dependency is Spring's JdbcTemplate. Just make sure you have the following in your pom:
+The only dependency is Spring's JdbcTemplate. Make sure you have the following in your pom:
  
 ```
 <dependency>
