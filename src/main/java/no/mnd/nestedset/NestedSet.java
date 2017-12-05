@@ -18,10 +18,9 @@ public class NestedSet {
         this.tableMeta = tableMeta;
     }
 
-    @SuppressWarnings("unchecked")
     public List<String> getTreeNodesFromTop(String topNode) {
         NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(ds);
-        Map namedParameters = new HashMap();
+        Map<String, String> namedParameters = new HashMap<>();
         namedParameters.put("topNode", topNode);
         return namedParameterJdbcTemplate.queryForList(new SqlTreeFromTopNodes(tableMeta).sql(),
                 namedParameters, String.class);
