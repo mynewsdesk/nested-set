@@ -20,10 +20,10 @@ The only dependency is Spring's JdbcTemplate. Just make sure you have the follow
 </dependency>
 ```
 
-## Example/test hierarchie
+## Example hierarchy used in test case
 
 
-![hierarchie](doc/electronics.png)
+![hierarchy](doc/electronics.png)
 
 ## The "nested set" view
 
