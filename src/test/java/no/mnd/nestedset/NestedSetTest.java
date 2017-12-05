@@ -4,6 +4,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class NestedSetTest {
@@ -37,12 +38,8 @@ public class NestedSetTest {
         List<String> result = nestedSet.getLeafNodes();
 
         Assert.assertEquals(6, result.size());
-        Assert.assertTrue(result.contains("TUBE"));
-        Assert.assertTrue(result.contains("LCD"));
-        Assert.assertTrue(result.contains("PLASMA"));
-        Assert.assertTrue(result.contains("FLASH"));
-        Assert.assertTrue(result.contains("CD PLAYERS"));
-        Assert.assertTrue(result.contains("2 WAY RADIOS"));
+        List<String> expected = Arrays.asList("TUBE", "LCD", "PLASMA", "FLASH", "CD PLAYERS", "2 WAY RADIOS");
+        Assert.assertEquals(expected, result);
 
         result.forEach(System.out::println);
     }
