@@ -36,4 +36,10 @@ public class NestedSet {
         JdbcTemplate template = new JdbcTemplate(ds);
          return template.queryForList(new SqlLeafNodes(tableMeta).sql(), String.class);
     }
+
+    public List<ContentDepth> getDepthNodes() {
+        JdbcTemplate template = new JdbcTemplate(ds);
+        SqlDepthNodes sqlDepthNodes = new SqlDepthNodes(tableMeta);
+        return template.query(sqlDepthNodes.sql(), sqlDepthNodes.rowMapper);
+    }
 }

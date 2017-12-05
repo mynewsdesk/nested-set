@@ -47,5 +47,18 @@ public class NestedSetTest {
         result.forEach(System.out::println);
     }
 
+    @Test
+    public void shouldFindDepthNodes() {
+        List<ContentDepth> result = nestedSet.getDepthNodes();
+
+        Assert.assertEquals(10, result.size());
+        ContentDepth cd = result.get(5);
+        Assert.assertEquals("PORTABLE ELECTRONICS", cd.content);
+        Assert.assertEquals(1, cd.depth.intValue());
+
+        result.forEach(System.out::println);
+
+    }
+
 
 }
